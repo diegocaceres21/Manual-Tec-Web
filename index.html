@@ -4,20 +4,179 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Primer Programa</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
     <table>
         <thead>
             <tr>
-                <th>Col1</th>
-                <th>Col2</th>
+                <th>Nombre</th>
+                <th>Descripcion</th>
+                <th>Usos</th>
             </tr>
         </thead>
         <tbody>
+
             <tr>
-                <td>Col1</td>
-                <td>Col2</td>
+                <td colspan="3" style="text-align: center;">Elementos Metadata</td>
+            </tr>
+            <tr>
+                <td>meta</td>
+                <td>El elemento meta representa metadata que no puede ser representada por otros elementos relacionados a meta</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>title</td>
+                <td>Define el titulo del documento que es mostrado en la pestaña de buscador</td>
+                <td>Siempre es usado dentro del elemento head</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">Elementos Sectioning</td>
+            </tr>
+            <tr>
+                <td>article</td>
+                <td>El elemento article representa una composición autocontenida en un documento, pagina, aplicación o sitio la cual pretende ser independientemente distribuida o reusable. Por ejemplo, un post de foro, articulo de revista, etc</td>
+                <td>
+                    <ul>
+                        <li>
+                            Cada article debería ser identificado, tipicamente incluyendo un heading como hijo de article
+                        </li>
+                        <li>
+                            Cuando un article está anidado, el elemento interior representa un articulo relacionado a un elemento exterior
+                        </li>
+                        <li>
+                            La informacion del autor de un articulo puede ser proveida mediante el elemento address
+                        </li>
+                        <li>
+                            La fecha y hora de una publicación pueden ser descritas usando el atributo datetime de un elemento time
+                        </li>
+                    </ul>
+                </td>   
+            </tr>
+            <tr>
+                <td>aside</td>
+                <td>El elemento aside representa una porcion de un documento cuyo contenido está indirectamente relacionado al contenido principal del documento. Frecuentemente se usa para menus laterales o cuadros de dialogo</td>
+                <td>No usarlo para etiquetar texto entre parentesis, ya que estos son considerados parte del flujo principal</td>
+            </tr>
+            <tr>
+                <td>nav</td>
+                <td>El elemento nav representa una sección de una página cuyo objetivo es proveer enlaces de navegación, ya sea en el mismo documento o hacia otros</td>
+                <td>
+                    <ul>
+                        <li>
+                            No es necesario que todos los links esten contenidos en este elemento. Algunos pueden ser contenidos en el footer
+                        </li>
+                        <li>
+                            Un documento puede tener varios elementos nav. Por ejemplo, uno para navegación por el sitio y otro para navegación solo en la pagina.
+                        </li>
+                        <li>
+                            Los screen readers pueden usar este elemento para determinar si omitir o no la renderización inicial de contenido de solo navegación
+                        </li>
+                    </ul>
+                </td>   
+            </tr>
+            <tr>
+                <td>section</td>
+                <td>El elemento section representa un sección generica separada de un documento, la cual no tiene un elemento semantico más especifico para representarlo.</td>
+                <td>
+                    <ul>
+                        <li>
+                            Solo debería ser utilizado si no hay un elemento más especifico para esto.
+                        </li>
+                        <li>
+                            Cada section debería ser identicado, tipicamente utilizando un elemento heading como hijo del elemento section
+                        </li>
+                    </ul>
+                </td>   
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">Elementos Heading</td>
+            </tr>
+            <tr>
+                <td>h1-h6</td>
+                <td>Representan seis niveles de cabeceras de sección, donde h1 es el nivel más alto y h6 el más bajo</td>
+                <td>
+                    <ul>
+                        <li>
+                            Su información puede ser usada por agentes del usuario para construir una tabla de contenido del documento
+                        </li>
+                        <li>
+                            No usar elementos heading para reajustar el tamaño del texto.
+                        </li>
+                        <li>
+                            No saltarse niveles de heading, siempre ir en orden.
+                        </li>
+                        <li>
+                            Evitar usar multiples h1 en una página
+                        </li>
+                    </ul>
+                </td>   
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">Elementos Phrasing</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">Elementos Embeded</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">Elementos Interactive</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">Elementos Flow</td>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>Representa un parrafo, es decir bloques de texto separados por espacios vacios entre si. Estos son elementos de bloque.</td>
+                <td></td>   
+            </tr>
+            <tr>
+                <td>span</td>
+                <td>Es un contenedor en linea para contenido tipo phrasing, el cual no representa algo hereditariamente. </td>
+                <td>Puede ser usado para agrupar elementos por temas de estilo y solo debe ser usado cuando ningun otro elemento semantico es apropiado</td>   
+            </tr>
+            <tr>
+                <td>div</td>
+                <td>Es el contenedor generico para contenido tipo flow</td>
+                <td>Solo debe ser usado cuando ningun otro elemento semantico es apropiado</td>   
+            </tr>
+            <tr>
+                <td>header</td>
+                <td>Representa contenido introductorio, que puede contener elementos heading, pero tambien un logo, un buscador, nombre del autor u otros elementos</td>
+                <td>Puede definir un header global del sitio, descrito como un banner o ser usado conteniendo los elementos heading</td>   
+            </tr>
+            <tr>
+                <td>footer</td>
+                <td>Representa un pie de pagina para su más cercano ancestro. </td>
+                <td>Generalmente contiene informacion del autor, derechos de autor u otros enlaces. Cuando su ancestro más cercano es el body, aplica un pie de pagina para toda esta. Este no introduce una nueva sección</td>   
+            </tr>
+            <tr>
+                <td>main</td>
+                <td>Representa el contenido dominante del body en un documento</td>
+                <td>El contenido main debería ser único en el documento y es un elemento estrictamente informativo</td>   
+            </tr>
+            <tr>
+                <td colspan="3" style="text-align: center;">Elementos Sin Categpria</td>
+            </tr>
+            <tr>
+                <td>html</td>
+                <td>Representa la raiz de un documento html, por lo que tambien es conocido como el elemento raiz.</td>
+                <td>Todos los otros elementos deben ser descendentes de este</td>   
+            </tr>
+            <tr>
+                <td>head</td>
+                <td>Contiene informacion leible por la maquina sobre el documento, como su titulo, scripts o estilos</td>
+                <td></td>   
+            </tr>
+            <tr>
+                <td>body</td>
+                <td>Representa el contenido de un documento HTML</td>
+                <td> Solo puede haber un body en un documento</td>   
             </tr>
         </tbody>
     </table>
