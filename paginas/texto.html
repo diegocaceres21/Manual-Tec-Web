@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="../index.html"> Volver</a>
+    <h1>MANEJO DE TEXTO</h1>
+    <!--p-->
+    <h2>Texto de Don Quijote</h2>
+    <p>Rescatado en 1580 por frailes trinitarios, vuelve por fin a la amada patria, y llega a Madrid. Con el rescate termina el período heroico de su vida,y con la vuelta a la Corte se inicia la existencia sin gloria del soldado lisiado y mal correspondido que solicita cargos civiles: vienen los apuros económicos</p>
+    <!--br-->
+    <h2>En las noches claras</h2>
+    <p>En las noches claras,<br> resuelvo el problema de la soledad del ser.<br> Invito a la luna y con mi sombra somos tres.</p>
+    <h2>Cambio de tema</h2>
+    <p>No dijo más, sino que, lanzando lentamente una bendición, se cubrió la cara con las manos, y permaneció así arrodillado, hasta que todos se hubieron marchado y él quedó solo en aquel sitio. </p>
+    <hr>
+    <p>Encontré allí a Queequeg completamente solo, pues había dejado la capilla un rato antes de la bendición. </p>
+    <h2>Word Break Oportunity</h2>
+    <p>Pero al ser entonces interrumpido,<wbr> dejó la imagen, y muy pronto, <wbr> acercándose a la mesa, tomó un gran libro que había allí</p>
+    <!--sup-->
+    <h2>Equivalencia entre masa y energía</h2>
+    <p>E = mc<sup>2</sup></p>
+    <!--sub-->
+    <h2>Nitrito de plata</h2>
+    <p>AgNO<sub>3</sub></p>
+    <!--strong-->
+    <h2>La venta</h2>
+    <p>Sancho logró poner a su amo atravesado en el asno,
+        ya que Rocinante no podía llevar a nadie. Avanzando
+        huia el camino real divisaron una venta que fué, a la
+        cuenta de don Quijote,<strong> un castillo ...</strong></p>
+    <!--em-->
+    <h2>Más de Don Quijote (em)</h2>
+    <p>¿Cómo se llama este caballero? <em>preguntó la asturiana Maritornes</em></p>
+    <!--mark-->
+    <h2>Moby Dick</h2>
+    <p>Él mismo, el gran Dios absoluto, el centro y circunferencia de toda democracia; <mark> ¡Su omnipresencia, nuestra divina igualdad! </mark></p>
+    <!--q-->
+    <h2>Cita Moby Dick</h2>
+    <q>Para una herida interior, la cosa más soberana del mundo es aceite de ballena</q>
+    <!--blockquote-->
+    <h2>Cita larga Moby Dick</h2>
+    <figure>
+            <blockquote cite="http://www.librosdearena.es/Biblioteca_pdf/Melville_Herman_Moby%20Dick_Ed%20perdidas_ilustraciones%20Fernando%20Gallego_jul2010.pdf">
+            <p>Nos hicimos a la vela desde el Elba, con viento NE, en el barco llamado El Jonás en la Ballena... Algunos dicen que la ballena no puede abrir la boca, pero es una fábula... Frecuentemente
+                ellos trepan hasta los mástiles por si pueden ver una ballena,
+                pues el primero que la descubra recibe un ducado por su fatiga... Me contaron de una ballena pescada junto a Shetland, que
+                tenía más de un barril de arenques en la barriga... Uno de nuestros arponeros me dijo que una vez en Spitzberg cazó una ballena que era toda blanca.</p>
+            </blockquote>
+        <figcaption>HARRIS COLL, <cite> Un viaje a Groenlandia</cite>, año 1671</figcaption>
+    </figure>
+    <!--dfn-->
+    <h2>Angular</h2>
+    <p><dfn>Angular</dfn> es un framework para aplicaciones web desarrollado en TypeScript, de código abierto, mantenido por Google</p>
+    <!--abbr-->
+    <h2>Acronimo</h2>
+    <abbr title="National Aeronautics and Space Administration">NASA</abbr>
+    <!--ins-->
+    <h2>Corregido</h2>
+    <p>Entonces ¿cómo es eso? ¿Dónde están los campos verdes? <del>¿Qué hacen éstos aquí?</del></p>
+    <ins><p>Ahí están los campos</p></ins>
+    <!--code-->
+    <h2>Python</h2>
+    <p>El método <code>print</code> es usado para imprimir algo en consola</p>
+    <!--samp-->
+    <h2>Salida</h2>
+    <samp>Presione Enter para continuar</samp>
+    <!--kbd-->
+    <h2>Comando</h2>
+    <p>Presione <kbd>Control</kbd> + <kbd>C</kbd> para copiar</p>
+    <!--pre-->
+    <h2>Codigo</h2>
+    <pre>
+        def entrenar(self,alpha,epsilon=1e-6):
+            t = self.theta
+            self.historial = []
+            while True:
+                self.historial.append(self.get_j(self.theta))
+                t[0] = t[0] - alpha * self.get_gradiente(self.theta)[0]
+                t[1] = t[1] - alpha * self.get_gradiente(self.theta)[1]
+                if abs(self.get_j(t) - self.historial[-1] < epsilon):
+                    break
+                self.theta = t
+            self.historial = np.array(self.historial)
+    </pre>
+    <!--address-->
+    <h2>Contacto</h2>
+    <address>
+        <a href="diego.caceres@ucb.edu.bo">diego.caceres@ucb.edu.bo</a><br>
+        <a href="tel:+59178321015">78321015</a>
+      </address>
+    <!--small-->
+    <p><small>Universidad Católica Boliviana “San Pablo” Sede Cochabamba</small></p>
+</body>
+</html>
